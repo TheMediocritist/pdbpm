@@ -19,12 +19,12 @@ function:
 music = pdbpm.newTrack()
 ```
 
-The `update()` method of each track should be called from within the
+The `update(dt)` method of each track should be called from within the
 `playdate.update()` function:
 
 ```lua
 function playdate.update(dt)
-  music:update()
+  music:update(dt)
 end
 ```
 
