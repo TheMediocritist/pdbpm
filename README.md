@@ -1,32 +1,29 @@
 # Lovebpm
-A [LÖVE](https://love2d.org/) library for syncing events to the BPM of an audio
-track.
+A [Playdate](play.date) library for syncing events to the BPM of an audio
+track. Almost entirely the work of rxi, from here: https://github.com/rxi/lovebpm
 
 
 ## Installation
-The [lovebpm.lua](lovebpm.lua?raw=1) file should be dropped into an existing
+The [pdbpm.lua](pdbpm.lua?raw=1) file should be dropped into an existing
 project and required by it:
 
 ```lua
-lovebpm = require "lovebpm"
+pdbpm = import "pdbpm"
 ```
 
-Lovebpm requires LÖVE version 0.10.0 or above.
-
-
 ## Getting Started
-First a `Track` object should be created using the `lovebpm.newTrack()`
+First a `Track` object should be created using the `pdbpm.newTrack()`
 function:
 
 ```lua
-music = lovebpm.newTrack()
+music = pdbpm.newTrack()
 ```
 
 The `update()` method of each track should be called from within the
-`love.update()` function:
+`playdate.update()` function:
 
 ```lua
-function love.update(dt)
+function playdate.update(dt)
   music:update()
 end
 ```
@@ -36,7 +33,7 @@ method takes a single argument: the music's filename or a `SoundData` object.
 The `setBPM()` method should be called with the BPM of the loaded track.
 
 ```lua
-music:load("loop.ogg")
+music:load("loop.wav")
 music:setBPM(127)
 ```
 
@@ -58,10 +55,10 @@ See the [demo](demo) directory for a small example project.
 
 
 ## Functions
-#### lovebpm.newTrack()
+#### pdbpm.newTrack()
 Creates and returns a new `Track` object.
 
-#### lovebpm.detectBPM(filename [, opts])
+#### pdbpm.detectBPM(filename [, opts])
 Tries to detect the BPM of a looped song. `filename` can be a filename or
 `SoundData` object. An `opts` table can be provided with additional options,
 consisting of the following:
