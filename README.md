@@ -1,4 +1,4 @@
-# Lovebpm
+# pdbpm
 A [Playdate](play.date) library for syncing events to the BPM of an audio
 track. Almost entirely the work of rxi, from here: https://github.com/rxi/lovebpm
 
