@@ -23,7 +23,7 @@ The `update(dt)` method of each track should be called from within the
 `playdate.update()` function:
 
 ```lua
-function playdate.update(dt)
+function playdate.update()
   music:update(dt)
 end
 ```
