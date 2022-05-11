@@ -27,6 +27,9 @@ function playdate.update(dt)
   music:update(dt)
 end
 ```
+Note that pdbpm requires you to calculate delta time (in seconds) and provide
+it to update. The demonstration in this repo includes a method for calculating
+dt.
 
 The track's `load()` method should be called to load in the music. The load
 method takes a single argument: the music's filename or a `SoundData` object.
