@@ -1,0 +1,7 @@
+name=pdbpm
+author=TheMediocritist
+description=Sync events to BPM of audio track
+bundleID=com.yourcompany.TemplateGame
+version=0.0.1
+buildNumber=000
+imagePath=SystemAssets
