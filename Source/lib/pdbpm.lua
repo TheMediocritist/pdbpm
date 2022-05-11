@@ -7,7 +7,7 @@
 -- under the terms of the MIT license. See LICENSE for details.
 --
 
-local pdbpm = { _version = "0.0.0" }
+local pdbpm = { _version = "0.0.1" }
 
 local Track = {}
 Track.__index = Track
@@ -190,7 +190,7 @@ end
 
 function Track:setTime(n)
   if not self.source then return end
-  self.source:seek(n)
+  self.source:setOffset(n)
   self.time = n
   self.lastSourceTime = n
   self.lastBeat = self:getBeat() - 1
