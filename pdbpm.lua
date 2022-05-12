@@ -48,7 +48,7 @@ function pdbpm.detectBPM(filename, opts)
   else
 	data = filename
   end
-  local channels = data:getChannels()
+  local channels = 2 --data:getChannels() -- no such function on Playdate, assume 2
   local samplerate = data:getSampleRate()
 
   -- Gets max amplitude over a number of samples at `n` seconds
@@ -66,7 +66,7 @@ function pdbpm.detectBPM(filename, opts)
   end
 
   -- Get track duration and init results table
-  local dur = data:getDuration("seconds")
+  local dur = data:getLength()
   local results = {}
 
   -- Get maximum allowed BPM
