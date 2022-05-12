@@ -2,6 +2,8 @@
 A [Playdate](play.date) library for syncing events to the BPM of an audio
 track. Almost entirely the work of rxi, from here: https://github.com/rxi/lovebpm
 
+# Not currently working due to missing functions
+
 
 ## Installation
 The [pdbpm.lua](pdbpm.lua?raw=1) file should be dropped into an existing
