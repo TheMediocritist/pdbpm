@@ -55,7 +55,7 @@ The music can be played by using the `play()` method.
 music:play()
 ```
 
-See the [demo](demo) directory for a small example project.
+See the [example implementation](Source) directory for a small example project.
 
 
 ## Functions
