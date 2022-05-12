@@ -44,7 +44,7 @@ function pdbpm.detectBPM(filename, opts)
   -- Load data
   local data = filename
   if type(data) == "string" then
-	data = love.sound.newSoundData(data)
+	data = playdate.sound.sampleplayer.new(data)
   else
 	data = filename
   end
