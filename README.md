@@ -5,7 +5,7 @@ track. Almost entirely the work of rxi, from here: https://github.com/rxi/lovebp
 
 ## Installation
 The [pdbpm.lua](pdbpm.lua?raw=1) file should be dropped into an existing
-project and required by it:
+project and imported:
 
 ```lua
 pdbpm = import "pdbpm"
@@ -29,7 +29,7 @@ end
 ```
 Note that pdbpm requires you to calculate delta time (in seconds) and provide
 it to update. The demonstration in this repo includes a method for calculating
-dt.
+dt. 
 
 The track's `load()` method should be called to load in the music. The load
 method takes a single argument: the music's filename (.wav only for now, no 
@@ -143,6 +143,9 @@ local beat, subbeat = music:getBeat()
 #### Track:update()
 Updates the track's internal state, and emits events if required. This should be
 called from the `love.update()` function.
+
+## TO DO
+* check whether pdbpm needs to maintain its own version of delta time. Work done between dt calculation in `playdate.update` and `track:update` could introduce lag?
 
 
 ## License
