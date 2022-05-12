@@ -33,7 +33,7 @@ dt.
 
 The track's `load()` method should be called to load in the music. The load
 method takes a single argument: the music's filename (.wav only for now, no 
-mp3s)or a `sampleplayer` object.
+mp3s) or a `sampleplayer` object.
 The `setBPM()` method should be called with the BPM of the loaded track.
 
 ```lua
